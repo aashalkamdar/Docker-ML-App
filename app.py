@@ -21,8 +21,8 @@ def predict_note_authentication():
 	entropy = request.args.get('entropy')
 	prediction = classifier.predict([[variance,skewness,curtosis,entropy]])
 
-	return "the predicted value is " + str(prediction)
-	
+	return "The predicted value  is " + str(prediction)
+
 
 @app.route('/predict_file',methods=['POST'])
 def predict_note_file():
